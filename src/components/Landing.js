@@ -5,7 +5,7 @@ class Landing extends Component {
     render(){
         return (
             <>
-                Hey
+                <h1>Code Prep</h1>
             </>
         );
     }
