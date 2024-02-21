@@ -1,7 +1,7 @@
 // Imports for project
 import React from "react"
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
   Route
 } from 'react-router-dom'
@@ -22,7 +22,11 @@ class App extends React.Component {
 
   render(){
     return(
-      <Landing/>
+      <Router>
+        <Routes>
+          <Route exact path="/" render={() => {<Landing/>}}/>
+        </Routes>
+      </Router>
     );
   }
 }
