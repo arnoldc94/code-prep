@@ -24,7 +24,7 @@ class App extends React.Component {
     return(
       <Router>
         <Routes>
-          <Route exact path="/" element={<Landing />}/>
+          <Route exact path="/" element={<Landing />} />
         </Routes>
       </Router>
     );

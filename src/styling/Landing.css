@@ -1,0 +1,108 @@
+/* Landing.css */
+.landing-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('../images/man-mountain-view.jpg'); /* Set the background image */
+    background-size: cover;
+}
+
+
+.landing-heading {
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+}
+
+.landing-body-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-left:5%;
+}
+
+.landing-image {
+    flex:1;
+}
+
+.landing-body {
+    position: absolute;
+    flex:1;
+    padding-left: 20px;
+}
+
+.landing-body p {
+    font-size: 18px;
+    margin-right: 35%;
+    line-height: 2.5rem;
+}
+
+.landing-body h3 {
+    
+    font-size: 25px;
+    
+}
+
+.landing-body p h3 {
+    margin-left: 3rem;
+}
+
+
+/*Start of landing page animation*/
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    25%{
+        opacity: .25;
+    }
+    50%{
+        opacity: .50;
+    }
+    75%{
+        opacity: .75;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.landing-body-container p{
+    animation: fadeIn 4s ease forwards; /* Apply animation to both top and bottom divs */
+    opacity: 0; /* Initially hide elements */
+}
+
+/* Additional styles for h1, h3, p elements */
+p {
+    opacity: 0; /* Initially hide elements */
+    transition: opacity 0s ease; /* Add transition effect for opacity */
+}
+
+.landing-body-container {
+   animation-delay: 0.5s; 
+}
+
+.landing-body-container, p {
+    opacity: 1;
+}
+
+@keyframes smoke {
+   0%{background-position: -200% bottom }
+   100%{ background-position: 0% bottom}
+}
+
+.smoke-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure smoke is on top of background image */
+    left:0;
+    background: url('../images/fog.png') repeat-x;
+    background-size: 200% auto;
+    background-position: 0 bottom;
+    animation: smoke 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
