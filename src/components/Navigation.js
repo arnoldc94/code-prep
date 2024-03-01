@@ -3,6 +3,20 @@ import { Link } from 'react-router-dom';
 import '../styling/Landing.css'
 
 class Navigation extends Component {
+    constructor(props){
+        super(props)
+        //initialize state to keep track of whether the navigation bar is open or closed
+        this.state = {
+            navBarOpen: false
+        };
+        // Bind the onSetNavBarOpen method to this instance
+        this.onSetNavBarOpen = this.onSetNavBarOpen.bind(this);
+    }
+
+    //Method to set the naveBar open state
+    onSetNavBarOpen(open) {
+        this.setState({navBarOpen: open});
+    }
     render (){
         return(
             <>
