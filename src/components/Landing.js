@@ -5,7 +5,7 @@ import '../styling/Landing.css'
 
 function Landing() {
     // Get the setBackground function from the context
-    const { setBackgroundImage } = useContext(BackgroundContext);
+    const { setBackgroundImage, backgroundImage } = useContext(BackgroundContext);
 
     // When the component is mounted, set the background to the background for this page
     useEffect(() => {
@@ -13,7 +13,7 @@ function Landing() {
     }, []);
 
     return (
-        <div className="landing-container background-image" >
+        <div className="landing-container background-image" style={{ backgroundImage }}>
             <div className='landing-body-container'>
                 <div className="landing-body smoke-animation">
                     <p>Code Prep is designed to give new developers the tools to study the fundamentals of web development through flashcards, videos and coding challenges.</p>

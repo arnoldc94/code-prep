@@ -1,0 +1,13 @@
+.nav-container {
+    display: flex; /* Align children in a row */
+    justify-content: space-around; /* Space children evenly along the row */
+    width: 100%;
+}
+
+.nav-container a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set text color to black */
+    font-size: 1rem; /* Set font size to 1.5rem */
+    font-weight: bold; /* Set font weight to bold */
+    margin: 0 1rem; /* Set margin to 0 on top and bottom, 1rem on left and right */
+}
