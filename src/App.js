@@ -11,10 +11,10 @@ import Landing from './components/Landing.js'
 import FlashCards from './components/FlashCards.js'
 import BackgroundContext from "./components/BackgroundContext.js";
 import Heading from "./components/Heading.js";
+import Sandbox from "./components/Sandbox.js";
 
 //CSS pages imports
 import './App.css';
-import Navigation from "./components/Navigation.js";
 
 function App() {
   // state to store the current background
@@ -31,6 +31,7 @@ function App() {
                 <Route exact path="/" element={<Landing />}/>
                 <Route path="/flashcards" element={<FlashCards />} />
               </Routes>
+              <Sandbox />
             </Router>
         </div>
       </BackgroundContext.Provider>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import BackgroundContext from './BackgroundContext.js';
-import mountainView from '../images/man-mountain-view.jpg'
-import '../styling/Landing.css'
+import mountainView from '../images/man-mountain-view.jpg';
+import '../styling/Landing.css';
 
 function Landing() {
     // Get the setBackground function from the context
@@ -10,7 +10,7 @@ function Landing() {
     // When the component is mounted, set the background to the background for this page
     useEffect(() => {
         setBackgroundImage(`url(${mountainView})`);
-    }, []);
+    });
 
     return (
         <div className="landing-container background-image" style={{ backgroundImage }}>
